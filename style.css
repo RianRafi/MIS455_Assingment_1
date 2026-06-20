@@ -1,0 +1,159 @@
+/* Basic page style and Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --background: #f4f7fb;
+  --card: #ffffff;
+  --text: #202940;
+  --muted: #4d5b79;
+  --accent: #e70c0c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 16px 12px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.site-nav a:hover {
+  color: var(--accent);
+}
+
+main {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 0 18px 48px;
+}
+
+.page-header {
+  background-color: #ffffff;
+  padding: 28px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(41, 61, 111, 0.08);
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  margin-top: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+}
+
+.content-block {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 16px rgba(33, 54, 94, 0.08);
+}
+
+.content-block h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.content-block p,
+.page-header p {
+  margin: 0 0 16px;
+}
+
+.image-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.image-row img,
+.grid-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+  box-shadow: 0 8px 18px rgba(22, 45, 84, 0.12);
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 10px 24px rgba(34, 59, 104, 0.08);
+}
+
+.gallery-card p {
+  margin: 14px 0 0;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 22px rgba(32, 60, 96, 0.08);
+}
+
+.service-card h2 {
+  margin-top: 18px;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 620px) {
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page-header,
+  .content-block,
+  .gallery-card,
+  .service-card {
+    padding: 20px;
+  }
+}
